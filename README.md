@@ -1,2 +1,2 @@
 # resource-center
-My resource center. Link, config, etc.
+My resource center. Links, config files, etc.
