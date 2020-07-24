@@ -5,17 +5,17 @@ if [[ $UID != 0 ]]; then
     exit 1
 fi
 
-printf "Updating...\n\n"
+printf "\nUpdating...\n\n"
 sudo apt update -y
 
-printf "Upgrade...\n\n"
+printf "\nUpgrade...\n\n"
 sudo apt upgrade
 
-printf "Running with sudo privilages...\n\n"
+printf "\nRunning with sudo privilages...\n\n"
 
 printf "Installing GIT...\n"
 sudo apt install git -y
-printf "GIT Installed...\n\n"
+printf "\nGIT Installed...\n\n"
 
 printf "Installing VS Code...\n"
 curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
@@ -23,10 +23,16 @@ sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.
 sudo sh -c 'echo "deb [arch=amd64 signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
 sudo apt-get install apt-transport-https -y
 sudo apt-get update
-sudo apt-get install code -y # or code-insiders
+sudo apt-get install code -y
 sudo rm packages.microsoft.gpg
-printf "VS Code Installed... \n\n"
+printf "\nVS Code Installed... \n\n"
 
+printf "Installing vim...\n"
+sudo apt install vim -y
+printf "\nVim Installed... \n\n"
+
+printf "Running autoremove...\n"
 sudo apt autoremove -y
+printf "\nDONE!\n\n"
 
 exit
