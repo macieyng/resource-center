@@ -10,6 +10,6 @@ This article is intended for engineers who use the Django framework. It gives a 
 
 https://djangostars.com/blog/configuring-django-settings-best-practices/
 
-### Docker & Django local development: a minimal, step-by-step guide
+### Docker & Django local development: a minimal, step-by-step guide by J.V. Zammit
 
 https://www.untangled.dev/2020/06/06/docker-django-local-dev/
