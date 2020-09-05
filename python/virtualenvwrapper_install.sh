@@ -68,7 +68,7 @@ else
 fi
 
 printf "➡️ Adding ~/.local/bin to PATH\n\n"
-echo "export \$PATH=\$HOME/.local/bin" >> ~/.bashrc
+echo "export \PATH=\$PATH:\$HOME/.local/bin" >> ~/.bashrc
 
 printf "🔎 Looking for virtualenvs folder... \n"
 workon=$(cat ~/.bashrc | grep WORKON_HOME)
