@@ -37,3 +37,5 @@ function gitignore{
     curl -UseBasicParsing $url -o .gitignore
 }
 ```
+
+Usage: `gitignore Python`
