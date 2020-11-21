@@ -17,14 +17,15 @@ function pwd {
     Get-Location
 }
 
-function lst {
+function ls {
     $path = $args[0]
 
     if (-Not $path) {
         $path = '.' 
     }
-    Write-Host ((ls $path -n -directory) -split "`n" -join "   ") "  " -ForegroundColor Green -nonewline
-    Write-Host ((ls $path -n -file) -split "`n" -join "   ") -ForegroundColor Cyan
+    
+    Write-Host ((Get-ChildItem $path -Name -Directory) -split "`n" -join "   ") "  " -ForegroundColor Green -nonewline
+    Write-Host ((Get-ChildItem $path -Name -File) -split "`n" -join "   ") -ForegroundColor Cyan
 }
 ```
 
