@@ -27,3 +27,13 @@ function lst {
     Write-Host ((ls $path -n -file) -split "`n" -join "   ") -ForegroundColor Cyan
 }
 ```
+
+## Command to create gitignore file
+Options are displayed here https://github.com/github/gitignore
+```powershell
+function gitignore{
+    $Lang = $args[0]
+    $url = "https://raw.githubusercontent.com/github/gitignore/master/" + $Lang + ".gitignore"
+    curl -UseBasicParsing $url -o .gitignore
+}
+```
