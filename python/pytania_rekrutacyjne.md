@@ -77,7 +77,8 @@ https://4programmers.net/Forum/Python/327204-pytania_rekrutacyjne_python_django
         https://stackoverflow.com/questions/1436703/what-is-the-difference-between-str-and-repr
     5. `__add__` vs `__radd__`
 
-        
+        `__radd__` is only called if the left object does not have an `__add__` method, or that method does not know how to add the two objects (which it flags by returning NotImplemented). Both classes have an `__add__` method, which do not return NotImplemented. Therefore the `__radd__` method would never be called.
+        https://stackoverflow.com/questions/9126766/addition-between-classes-using-radd-method
 17. czym się różni metoda od funkcji?
 18. co to jest self? czy self jest słowem kluczowym?
 19. co to jest słowo kluczowe (keyword)?
