@@ -1,8 +1,8 @@
 # `__str__` vs `__repr__`
 
-This two built-n magic methods (aka dunders - double underscores) are often confused by begginers, intermediate developers, but also by advanced devs.
+This two built-in magic methods (aka dunders - double underscores) are often confused by begginers, intermediate, but also advanced devs.
 
-First of all we have to say that this methods are not equivalent. The purpose of each is different. Let's have a look into official docs.
+First of all, we have to say that this methods are not equivalent. The purpose of each is different. Let's have a look into official docs.
 
 ### Official documentation
 
@@ -25,7 +25,7 @@ First of all we have to say that this methods are not equivalent. The purpose of
 
 As for `__repr__`: it should in be such a form that it could be evaluated as valid Python code. If this is not possible then it should be in form of a string that starts and ends with angled brackets (`<...>`). 
 
-Mark Lutz in Learing Python also says that `__repr__` should be used as a way to display all revelant data in object when debugging in interactive mode. This happens when you state the instance variable directly in the shell like `>> my_instance` instead of calling `>> print(my_instance)` (which calls `__str__`).
+Mark Lutz in Learing Python also says that `__repr__` should be used as a way to display all relevant data in object when debugging in interactive mode. This happens when you call `repr(my_instance)` instead of calling `>> print(my_instance)` (which calls `__str__`).
 
 `__repr__` should allow to recreate (create a copy of) an object when `eval(repr(obj))` is called or at least throw SyntaxError (caused by angled brackets) to prevent evaluating returned string. 
 
