@@ -13,3 +13,7 @@ https://git-scm.com/book/en/v2
 
 ## Git Magic
 http://www-cs-students.stanford.edu/~blynn/gitmagic/
+
+
+## How to delete accidently pushed commits
+https://stackoverflow.com/questions/13716658/how-to-delete-all-commit-history-in-github
